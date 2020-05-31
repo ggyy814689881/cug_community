@@ -13,7 +13,7 @@ public class ForumDalApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ForumDalApplication.class, args);
-		System.out.println("localhost:8080");
+		System.out.println("localhost:8081");
 	}
 
 }

@@ -27,6 +27,8 @@
             </div>
             <div class="fly-list-badge">
               <!--<span class="layui-badge layui-bg-red">精帖</span>-->
+            	<span th:if="${postVo.level} gt 0" class="layui-badge layui-bg-black">置顶</span>
+          		<span th:if="${postVo.recommend}" class="layui-badge layui-bg-red">精帖</span>
             </div>
           </li>
               <!--
@@ -75,6 +77,8 @@
             </div>
             <div class="fly-list-badge">
               <!--<span class="layui-badge layui-bg-red">精帖</span>-->
+           		<span th:if="${postVo.level} gt 0" class="layui-badge layui-bg-black">置顶</span>
+          		<span th:if="${postVo.recommend}" class="layui-badge layui-bg-red">精帖</span>
             </div>
           </li>
         

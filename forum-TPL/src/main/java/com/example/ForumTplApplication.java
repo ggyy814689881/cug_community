@@ -10,7 +10,7 @@ public class ForumTplApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ForumTplApplication.class, args);
-		System.out.println("localhost:8081");
+		System.out.println("localhost:8080");
 		///res/images/avatar/0.jpg
 	}
 

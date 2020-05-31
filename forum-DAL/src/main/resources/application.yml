@@ -3,9 +3,9 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     #driver-class-name: com.p6spy.engine.spy.P6SpyDriver
-    url: jdbc:mysql://39.97.249.20:3308/forum
+    url: jdbc:mysql://localhost:3308/forum
     username: root
-    password: wangcong123
+    password: password
   freemarker:
     settings:
       classic_compatible: true

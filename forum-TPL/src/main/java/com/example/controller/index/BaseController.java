@@ -18,6 +18,8 @@ public class BaseController {
 	PageService pageService;
 	@Reference
 	OnePost onepost;
+	
+	
 	public IpageVo getPage(Long categoryId, Long userId,
 			Integer level, Boolean recommend, String order) {
 		int pn = ServletRequestUtils.getIntParameter(req, "pn", 1);
@@ -26,4 +28,5 @@ public class BaseController {
 		IpageVo postVos = pageService.getIPage(pn,size,categoryId,userId,level,recommend,"created");
 		return postVos;
 	}
+
 }

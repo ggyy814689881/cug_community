@@ -23,6 +23,6 @@ public class IndexController extends BaseController{
 		model.addAttribute("postVos", postVos);
 		model.addAttribute("IpostVos", IpostVos);
 		model.addAttribute("currentCategoryId", 0);
-		return "/html/index";
+		return "html/index";
 	}
 }
