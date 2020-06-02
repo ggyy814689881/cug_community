@@ -23,11 +23,10 @@ public class PostController extends BaseController{
 	@GetMapping("/detail/{id:\\d*}")
 	public String detail(@PathVariable("id") Long id,Model model) {
 		PostVo post = onepost.selectOnePost(id);
-		System.out.println(post.getTitle());
 		Assert.notNull(post, "文章不存在或者已经被删除");
-//		int pn = ServletRequestUtils.getIntParameter(req, "pn", 1);
-//		int size = ServletRequestUtils.getIntParameter(req, "size", 2);
-		CommentVos commentVos = this.pageService.getCommentVos(1, 2, post.getId(), null, "created");
+		int pn = ServletRequestUtils.getIntParameter(req, "pn", 1);
+		int size = ServletRequestUtils.getIntParameter(req, "size", 2);
+		CommentVos commentVos = this.pageService.getCommentVos(pn, size, post.getId(), null, "created");
 		System.out.println(commentVos.getSize());
 		model.addAttribute("post", post);
 		model.addAttribute("commentVos", commentVos);

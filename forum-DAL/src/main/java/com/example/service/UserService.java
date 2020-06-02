@@ -1,10 +1,8 @@
 package com.example.service;
 
-import com.example.entity.User;
-
-import java.io.Serializable;
-
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.example.entity.User;
+import com.example.lang.Result;
 
 /**
  * <p>
@@ -16,4 +14,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface UserService extends IService<User> {
 //	public User Login(Serializable id, String password);
+	public Result Reg(User user);
 }

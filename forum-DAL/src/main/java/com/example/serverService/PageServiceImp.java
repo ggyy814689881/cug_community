@@ -51,7 +51,7 @@ public class PageServiceImp implements PageService{
 				.eq(userId!=null, "user_id", userId)
 				.orderByDesc(order!=null, order);
 		IPage<CommentVo> commentVos=commentMapper.selectComments(page, queryWrapper);
-		System.out.println(commentVos.getTotal());
+//		System.out.println(commentVos.getTotal());
 		return new CommentVos(commentVos.getRecords(),commentVos.getTotal(),
 				commentVos.getSize(),commentVos.getCurrent());
 	}

@@ -19,7 +19,7 @@ public class ContextCategoryServiceImp implements ContextCategoryService{
 	public List<Category> getCategorys(){
 		List<Category> Categorys = categoryService.list(new QueryWrapper<Category>()
 				.eq("status", 0));
-		System.out.println(Categorys.size());
+//		System.out.println(Categorys.size());
 		return Categorys;
 	}
 }

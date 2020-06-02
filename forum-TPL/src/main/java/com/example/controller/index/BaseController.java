@@ -8,17 +8,19 @@ import org.springframework.web.bind.ServletRequestUtils;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.example.serverService.OnePost;
 import com.example.serverService.PageService;
+import com.example.serverService.TplUserService;
 import com.example.vo.IpageVo;
 
 
 public class BaseController {
 	@Autowired
-	HttpServletRequest req;
+	protected HttpServletRequest req;
 	@Reference
 	PageService pageService;
 	@Reference
 	OnePost onepost;
-	
+	@Reference
+	protected TplUserService userService;
 	
 	public IpageVo getPage(Long categoryId, Long userId,
 			Integer level, Boolean recommend, String order) {

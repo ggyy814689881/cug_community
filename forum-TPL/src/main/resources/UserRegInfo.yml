@@ -1,0 +1,40 @@
+wq:
+  userreginfo:
+    users:
+#    1两次密码不一致
+    - username: laowang
+      password: laowang
+      email: 1111@qq.com
+#     2 用户名不能为空
+    - password: laowang
+      email: 1111@qq.com
+#      3密码不能为空
+    - username: laowang
+      email: 1111@qq.com
+#      4邮箱不能为空
+    - username: laowang
+      password: laowang
+    #  5验证码不正确
+    - username: laowang
+      password: laowang
+      email: 1111@qq.com
+      
+    reginfos:
+    - repass: laowang1
+      vercode: 34345
+      status: -1
+      msg: 两次密码不一致
+      
+    - status: -1
+      msg: 用户名不能为空
+      
+    - status: -1
+      msg: 密码不能为空
+    
+    - status: -1
+      msg: 邮箱不能为空
+      
+    - repass: laowang
+      vercode: 34345
+      status: -1
+      msg: 验证码不正确

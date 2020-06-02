@@ -1,7 +1,8 @@
 package com.example.entity;
 
-import com.example.entity.BaseEntity;
-import java.time.LocalDateTime;
+import java.io.Serializable;
+import java.util.Date;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -17,7 +18,7 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Accessors(chain = true)
-public class User extends BaseEntity {
+public class User extends BaseEntity implements Serializable{
 
     private static final long serialVersionUID = 1L;
 
@@ -69,7 +70,7 @@ public class User extends BaseEntity {
     /**
      * 生日
      */
-    private LocalDateTime birthday;
+    private Date birthday;
 
     /**
      * 头像
@@ -89,7 +90,7 @@ public class User extends BaseEntity {
     /**
      * 最后的登陆时间
      */
-    private LocalDateTime lasted;
+    private Date lasted;
 
 
 }
